@@ -6,6 +6,7 @@ const answerThree = document.getElementById("answer_three");
 const picture = document.getElementById("picture-question");
 const answerButton = document.getElementsByClassName("answer-button")
 const showButton = document.getElementById("answer-frame")
+let finalScore = 0;
 
 /* Make a random question array from the questions */
 let randomQuestions = [];
@@ -77,6 +78,8 @@ function correct() {
     let presentScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++presentScore;
     nextQuestion();
+    finalScore = presentScore;
+    return(finalScore)
 }
 
 function incorrect() {
@@ -87,9 +90,14 @@ function incorrect() {
 
 /** Function that display the new question and remove the old one from the array */
 function nextQuestion() {
-    console.log("next question loding" )
-    randomQuestions.shift();
-    askedQuestion = randomQuestions[0];
-    console.log(askedQuestion )
-    showQuestion(askedQuestion);
+    if (randomQuestions.length === 0) {
+        alert("out of questions")
+    } else {
+        
+        randomQuestions.shift();
+        console.log(randomQuestions.length)
+        askedQuestion = randomQuestions[0];
+        
+        showQuestion(askedQuestion);
+    }
 }
