@@ -5,13 +5,13 @@ const answerTwo = document.getElementById("answer_two");
 const answerThree = document.getElementById("answer_three"); 
 
 /* Eventlisteners */
-
 askQuestion.addEventListener('click', startGame);
 
 
+
+
 function startGame() {
-    alert("Start game")
-    console.log("Start game")
+    
 }
 
 function question() {
