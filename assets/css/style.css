@@ -2,6 +2,8 @@
 
 body {
     background-image: url(../images/forest_background.jpg);
+    background-color: darkolivegreen;
+    background-size: cover;
 }
 
 /* Style for the header */
@@ -9,6 +11,7 @@ body {
     text-align: center;
     height: 50xp;
     font-size: 20px;
+    color: blanchedalmond;
 }
 
 /* Style for game area */
@@ -34,3 +37,32 @@ body {
     max-width: 100%;
     margin: 0 auto;
 }
+
+#answer-frame {
+    align-items: center;
+    display: flex;
+}
+.answer-button {
+    margin: 10px auto;
+    background-color: darkolivegreen;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 33%;
+}
+
+#next-button-frame {
+    align-items: center;
+    display: flex;
+    margin-top: 20px;
+}
+
+#next-button {
+    margin: 0 auto;
+    background-color: darkolivegreen;
+    border-radius: 10px;
+    padding: 0.5rem;
+    width: 33%;
+    font-size: large;
+}
+
+/* Styling for scoreboard */
