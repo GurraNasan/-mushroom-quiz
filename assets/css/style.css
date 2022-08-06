@@ -6,6 +6,10 @@ body {
     background-size: cover;
 }
 
+.hide {
+    display: none;
+}
+
 /* Style for the header */
 #page-header {
     text-align: center;

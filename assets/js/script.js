@@ -4,6 +4,8 @@ const answerOne = document.getElementById("answer_one");
 const answerTwo = document.getElementById("answer_two"); 
 const answerThree = document.getElementById("answer_three"); 
 const picture = document.getElementById("picture-question");
+const answerButton = document.getElementsByClassName("answer-button")
+const showButton = document.getElementById("answer-frame")
 
 /* Make a random question array from the questions */
 let randomQuestions = [];
@@ -13,15 +15,25 @@ shuffle(randomQuestions);
 /* Question to ask */
 let askedQuestion = {};
 
-/* Eventlisteners */
+/* Eventlistener for askquestion button */
 askQuestion.addEventListener('click', startGame);
 
+/* Eventlisteners for all answerbuttons*/
 
+for(let i = 0; i < answerButton.length; i++) {
+    
+    answerButton[i].addEventListener('click', checkAnswer);
+
+}
 
 
 function startGame() {
+    answerOne.classList.remove("hide");
+    answerTwo.classList.remove("hide");
+    answerThree.classList.remove("hide");
     askedQuestion = randomQuestions[0];
-    showQuestion(askedQuestion)
+    showQuestion(askedQuestion);
+    
 
 }
 /** Function to display the question to the user */
@@ -50,14 +62,27 @@ function shuffle(randomQuestions) {
   return randomQuestions;
 }
 
-
+/** Function to check if you answerd correct */
 function checkAnswer() {
-
+    if (this.innerHTML === askedQuestion.correct) {
+        correct()
+        answerOne.classList.add("hide");
+        answerTwo.classList.add("hide");
+        answerThree.classList.add("hide");
+    } else {
+        incorrect ()
+        answerOne.classList.add("hide");
+        answerTwo.classList.add("hide");
+        answerThree.classList.add("hide");
+    }
 }
-function correct() {
 
+function correct() {
+    let presentScore = parseInt(document.getElementById("correct").innerText);
+    document.getElementById("correct").innerText = ++presentScore;
 }
 
 function incorrect() {
-
+    let presentScore = parseInt(document.getElementById("incorrect").innerText);
+    document.getElementById("incorrect").innerText = ++presentScore;
 }
