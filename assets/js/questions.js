@@ -3,72 +3,72 @@
 const questions = [
     {
         picture: "chanterelles.jpg",
-        firstAnswer: "truffle", 
-        secondAnswer: "porcino",
-        thirdAnswer: "chanterelles",
-        correct: "chanterelles"
+        firstAnswer: "Truffle", 
+        secondAnswer: "Porcino",
+        thirdAnswer: "Chanterelles",
+        correct: "Chanterelles"
     },
     {
         picture: "giant_puffball.jpg",
-        firstAnswer: "honey_mushroom", 
-        secondAnswer: "giant_puffball",
-        thirdAnswer: "chanterelles",
-        correct: "giant_puffball"
+        firstAnswer: "Honey mushroom", 
+        secondAnswer: "Giant puffball",
+        thirdAnswer: "Chanterelles",
+        correct: "Giant puffball"
     },
     {
         picture: "honey_mushroom.jpg",
-        firstAnswer: "truffle", 
-        secondAnswer: "honey_mushroom",
-        thirdAnswer: "st_georges_mushroom",
-        correct: "honey_mushroom"
+        firstAnswer: "Truffle", 
+        secondAnswer: "Honey mushroom",
+        thirdAnswer: "St georges mushroom",
+        correct: "Honey mushroom"
     },
     {
         picture: "horn_of_plenty.jpg",
-        firstAnswer: "horn_of_plenty", 
-        secondAnswer: "matsutake",
-        thirdAnswer: "chanterelles",
-        correct: "horn_of_plenty"
+        firstAnswer: "Horn of plenty", 
+        secondAnswer: "Matsutake",
+        thirdAnswer: "The false morel",
+        correct: "Horn of plenty"
     },
     {
         picture: "porcino.jpg",
-        firstAnswer: "saffron_milk_cap", 
-        secondAnswer: "porcino",
-        thirdAnswer: "matsutake",
-        correct: "porcino"
+        firstAnswer: "Saffron milk cap", 
+        secondAnswer: "Porcino",
+        thirdAnswer: "Matsutake",
+        correct: "Porcino"
     },
     {
         picture: "saffron_milk_cap.jpg",
-        firstAnswer: "truffle", 
-        secondAnswer: "st_georges_mushroom",
-        thirdAnswer: "saffron_milk_cap",
-        correct: "saffron_milk_cap"
+        firstAnswer: "Truffle", 
+        secondAnswer: "St georges mushroom",
+        thirdAnswer: "Saffron milk cap",
+        correct: "Saffron milk cap"
     },
     {
         picture: "st_georges_mushroom.jpg",
-        firstAnswer: "st_georges_mushroom", 
-        secondAnswer: "horn_of_plenty",
-        thirdAnswer: "saffron_milk_cap",
-        correct: "st_georges_mushroom"
+        firstAnswer: "St georges mushroom", 
+        secondAnswer: "Horn of plenty",
+        thirdAnswer: "Saffron milk cap",
+        correct: "St georges mushroom"
     },
     {
         picture: "the_false_morel.jpg",
-        firstAnswer: "saffron_milk_cap", 
-        secondAnswer: "porcino",
-        thirdAnswer: "the_false_morel",
-        correct: "the_false_morel"
+        firstAnswer: "Saffron milk cap", 
+        secondAnswer: "Porcino",
+        thirdAnswer: "The false morel",
+        correct: "The false morel"
     },
     {
         picture: "truffle.jpg",
-        firstAnswer: "truffle", 
-        secondAnswer: "porcino",
-        thirdAnswer: "chanterelles",
-        correct: "truffle"
+        firstAnswer: "Truffle", 
+        secondAnswer: "Honey mushroom",
+        thirdAnswer: "Chanterelles",
+        correct: "Truffle"
     },
     {
         picture: "matsutake.jpg",
-        firstAnswer: "horn_of_plenty", 
-        secondAnswer: "the_false_morel",
-        thirdAnswer: "matsutake",
-        correct: "matsutake"
+        firstAnswer: "Horn of plenty", 
+        secondAnswer: "The false morel",
+        thirdAnswer: "Matsutake",
+        correct: "Matsutake"
     },
 ]
