@@ -1,5 +1,5 @@
 /* Variabel */
-const askQuestion = document.getElementById("next-button");
+const askQuestion = document.getElementById("ask-question");
 const answerOne = document.getElementById("answer_one"); 
 const answerTwo = document.getElementById("answer_two"); 
 const answerThree = document.getElementById("answer_three"); 
@@ -33,8 +33,7 @@ function startGame() {
     answerThree.classList.remove("hide");
     askedQuestion = randomQuestions[0];
     showQuestion(askedQuestion);
-    
-
+    askQuestion.classList.add("hide");
 }
 /** Function to display the question to the user */
 function showQuestion() {
@@ -66,23 +65,31 @@ function shuffle(randomQuestions) {
 function checkAnswer() {
     if (this.innerHTML === askedQuestion.correct) {
         correct()
-        answerOne.classList.add("hide");
-        answerTwo.classList.add("hide");
-        answerThree.classList.add("hide");
+        
+       
     } else {
         incorrect ()
-        answerOne.classList.add("hide");
-        answerTwo.classList.add("hide");
-        answerThree.classList.add("hide");
+        
     }
 }
 
 function correct() {
     let presentScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++presentScore;
+    nextQuestion();
 }
 
 function incorrect() {
     let presentScore = parseInt(document.getElementById("incorrect").innerText);
     document.getElementById("incorrect").innerText = ++presentScore;
+    nextQuestion();
+}
+
+/** Function that display the new question and remove the old one from the array */
+function nextQuestion() {
+    console.log("next question loding" )
+    randomQuestions.shift();
+    askedQuestion = randomQuestions[0];
+    console.log(askedQuestion )
+    showQuestion(askedQuestion);
 }
