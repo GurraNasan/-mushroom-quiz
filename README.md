@@ -40,6 +40,15 @@ No errors were found when passing through JSHint.
 ### Accessibility
 ![Lighthouse](assets/images/lighthouse.jpg)
 
+## Deployment
+The site was deployed to GitHub pages. 
+
+The steps to deploy are as follows:
+In the GitHub repository, navigate to the Settings tab.
+Press pages under Code and automation in the menu. 
+Under source you press the dropdown menu and choose main and press save. 
+Now the page is deployed and you can find the link in the blue box. 
+Here is the live link for my project: https://gurranasan.github.io/-mushroom-quiz/
 
 
 ## Credits
