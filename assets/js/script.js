@@ -4,8 +4,8 @@ const answerOne = document.getElementById("answer_one");
 const answerTwo = document.getElementById("answer_two"); 
 const answerThree = document.getElementById("answer_three"); 
 const picture = document.getElementById("picture-question");
-const answerButton = document.getElementsByClassName("answer-button")
-const showButton = document.getElementById("answer-frame")
+const answerButton = document.getElementsByClassName("answer-button");
+const restart = document.getElementById("restart-button");
 let finalScore = 0;
 
 /* Make a random question array from the questions */
@@ -16,9 +16,9 @@ shuffle(randomQuestions);
 /* Question to ask */
 let askedQuestion = {};
 
-/* Eventlistener for askquestion button */
+/* Eventlistener for askquestion and restart button */
 askQuestion.addEventListener('click', startGame);
-
+restart.addEventListener('click', newGame);
 /* Eventlisteners for all answerbuttons*/
 
 for(let i = 0; i < answerButton.length; i++) {
@@ -66,11 +66,8 @@ function shuffle(randomQuestions) {
 function checkAnswer() {
     if (this.innerHTML === askedQuestion.correct) {
         correct()
-        
-       
     } else {
         incorrect ()
-        
     }
 }
 
@@ -90,14 +87,31 @@ function incorrect() {
 
 /** Function that display the new question and remove the old one from the array */
 function nextQuestion() {
-    if (randomQuestions.length === 0) {
-        alert("out of questions")
+    if (randomQuestions.length === 1) {
+        theEnd();
     } else {
-        
         randomQuestions.shift();
-        console.log(randomQuestions.length)
         askedQuestion = randomQuestions[0];
-        
         showQuestion(askedQuestion);
     }
+}
+function theEnd() {
+    picture.classList.add("hide");
+    answerOne.classList.add("hide");
+    answerTwo.classList.add("hide");
+    answerThree.classList.add("hide");
+    restart.classList.remove("hide");
+    
+    
+}
+function newGame() {
+    randomQuestions = [...questions];
+    shuffle(randomQuestions);
+    picture.classList.remove("hide");
+    answerOne.classList.remove("hide");
+    answerTwo.classList.remove("hide");
+    answerThree.classList.remove("hide");
+    restart.classList.add("hide");
+    document.getElementById("correct").innerText ="0"
+    document.getElementById("incorrect").innerText ="0"
 }

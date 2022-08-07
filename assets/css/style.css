@@ -39,6 +39,7 @@ body {
 
 #picture-frame img {
     max-width: 100%;
+    max-height: 50%;
     margin: 0 auto;
 }
 
@@ -60,7 +61,7 @@ body {
     margin-top: 20px;
 }
 
-#ask-question {
+.ask-button {
     margin: 0 auto;
     background-color: darkolivegreen;
     border-radius: 10px;
@@ -76,11 +77,11 @@ body {
     font-size: 1.2rem;
 }
 
-#correct-scores {
+#correct {
     color: green;
 }
 
-#incorrect-scores {
+#incorrect {
     color: red;
 }
 
