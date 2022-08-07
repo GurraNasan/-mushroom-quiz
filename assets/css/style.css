@@ -13,7 +13,6 @@ body {
 /* Style for the header */
 #page-header {
     text-align: center;
-    height: 50xp;
     font-size: 20px;
     color: blanchedalmond;
 }
@@ -33,7 +32,7 @@ body {
 
 #picture-frame {
     width: 70%;
-    height: 400px;
+    height: 70%;
     margin: 0 auto;
     
 }
@@ -44,6 +43,7 @@ body {
     margin: 0 auto;
     position: relative;
     
+
 }
 
 #answer-frame {
@@ -52,7 +52,7 @@ body {
 }
 .answer-button {
     margin: 10px auto;
-    background-color: darkolivegreen;
+    background-color: rgba(156, 202, 156, 0.8);
     border-radius: 10px;
     padding: 0.5rem;
     width: 33%;
@@ -66,7 +66,7 @@ body {
 
 .ask-button {
     margin: 0 auto;
-    background-color: darkolivegreen;
+    background-color: rgb(120, 141, 83);
     border-radius: 10px;
     padding: 0.5rem;
     width: 33%;

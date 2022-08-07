@@ -6,7 +6,7 @@ const answerThree = document.getElementById("answer_three");
 const picture = document.getElementById("picture-question");
 const answerButton = document.getElementsByClassName("answer-button");
 const restart = document.getElementById("restart-button");
-let finalScore = 0;
+
 
 /* Make a random question array from the questions */
 let randomQuestions = [];
@@ -65,9 +65,9 @@ function shuffle(randomQuestions) {
 /** Function to check if you answerd correct */
 function checkAnswer() {
     if (this.innerHTML === askedQuestion.correct) {
-        correct()
+        correct();
     } else {
-        incorrect ()
+        incorrect ();
     }
 }
 
@@ -75,8 +75,6 @@ function correct() {
     let presentScore = parseInt(document.getElementById("correct").innerText);
     document.getElementById("correct").innerText = ++presentScore;
     nextQuestion();
-    finalScore = presentScore;
-    return(finalScore)
 }
 
 function incorrect() {
@@ -112,6 +110,6 @@ function newGame() {
     answerTwo.classList.remove("hide");
     answerThree.classList.remove("hide");
     restart.classList.add("hide");
-    document.getElementById("correct").innerText ="0"
-    document.getElementById("incorrect").innerText ="0"
+    document.getElementById("correct").innerText ="0";
+    document.getElementById("incorrect").innerText ="0";
 }
